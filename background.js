@@ -1,6 +1,3 @@
-// 1 get all the relative dom elements to use for rendering
-// 2 fetch pictures from backend
-// 3 render them
 let objs = {
     body: null,
     inputCity: null,
@@ -36,10 +33,8 @@ const cbInput = (evt) => {
 }
 const setKeyEvent = () => {
 
-    // input keyup
     objs.inputCity.addEventListener('keyup', cbInput)
 
-    // todo: add more key event here
     objs.body.addEventListener('keyup', function (evt){
         if(evt.key === 'ArrowLeft'){
             prevPage()
@@ -48,9 +43,6 @@ const setKeyEvent = () => {
             nextPage()
         }
     })
-
-    // objs.btnPrev.addEventListener('click', prevPage)
-    // objs.btnNext.addEventListener('click', nextPage)
 
     let arrEle = [objs.inputCity, objs.btnPrev, objs.btnNext]
     let evtName = ['keyup', 'click', 'click']
